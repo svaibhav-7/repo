@@ -1,0 +1,73 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>eShopCo Compression Demo — Project</title>
+  <meta name="description" content="Demo page showing lossless image compression experiments for eShopCo.">
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; max-width:900px; margin:40px auto; line-height:1.6; padding:0 20px; }
+    header h1 { margin:0 0 10px 0; }
+    .grid { display:flex; gap:16px; flex-wrap:wrap; }
+    .card { border:1px solid #eee; padding:12px; border-radius:8px; width:320px; }
+    footer { margin-top:40px; color:#666; font-size:0.9rem; }
+    pre { background:#f7f7f7; padding:8px; border-radius:6px; overflow:auto; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>eShopCo Bandwidth Reduction — Compression Demo</h1>
+    <p>
+      This page showcases lossless compression experiments for product images and includes contact information as required.
+      The email is wrapped to avoid CloudFlare/GitHub obfuscation handling:
+      <!--email_off-->23f3003691@ds.study.iitm.ac.in<!--/email_off-->
+    </p>
+  </header>
+
+  <section>
+    <h2>What you'll find here</h2>
+    <ul>
+      <li>A small demo and instructions to reproduce compression results</li>
+      <li>A link to the GitHub repo (replace <code>USERNAME</code> and <code>REPO</code> below)</li>
+    </ul>
+
+```
+<div class="grid">
+  <div class="card">
+    <h3>How to compress (lossless)</h3>
+    <p>Use a script with Pillow (Python) to create lossless PNG/WebP outputs. Example command used in the demo:</p>
+    <pre><code>uv deploy y-a5pbxe8a</code></pre>
+    <p><em>Note:</em> true product photographs rarely compress below 400 bytes losslessly; use tiny images for that threshold.</p>
+  </div>
+
+  <div class="card">
+    <h3>Resources</h3>
+    <p>GitHub Flavored Markdown: <a href="https://github.github.com/gfm/">GFM spec</a></p>
+    <p><strong>Guardrail token:</strong> rb-m0r9q0cue-5ypfrn</p>
+  </div>
+</div>
+```
+
+  </section>
+
+  <section>
+    <h2>Small demo image (example)</h2>
+    <p>Below is a tiny example image (1×1 solid pixel) generated for testing. Real product images will be larger.</p>
+    <img alt="Tiny demo" src="tiny-example.png" width="64" height="64" style="image-rendering:pixelated;border:1px solid #ddd;padding:6px;border-radius:6px;">
+  </section>
+
+  <footer>
+    <p>
+      Project compliance note: we follow an audit step to log deploy events and record artifacts [^compliance-ifxr8yd].
+    </p>
+    <p>Replace <code>USERNAME</code> and <code>REPO</code> in the URL pattern below to see your published page.</p>
+  </footer>
+
+  <!-- footnote definition -->
+
+  <p style="display:none;">
+    [^compliance-ifxr8yd]: Audit step: verify deployment trail, signatures, and artifact checksums. 
+  </p>
+</body>
+</html>
