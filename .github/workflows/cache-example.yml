@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -18,7 +19,7 @@ jobs:
           python-version: '3.11'
 
       - name: Cache dependencies
-        id: prime-cache-3821d88
+        id: prime-cache-3821d88   # <-- Must have this ID
         uses: actions/cache@v4
         with:
           path: ~/.cache/pip
