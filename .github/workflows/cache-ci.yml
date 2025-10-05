@@ -1,0 +1,48 @@
+name: CI with Cache
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Cache dependencies
+        id: cache-deps
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/pip
+            .venv
+          key: cache-3821d88
+
+      - name: Prime cache step
+        name: prime-cache-3821d88
+        run: |
+          if [[ "${{ steps.cache-deps.outputs.cache-hit }}" == "true" ]]; then
+            echo "Cache hit"
+          else
+            echo "Cache miss"
+          fi
+
+      - name: Install dependencies
+        run: |
+          python -m venv .venv
+          source .venv/bin/activate
+          pip install -r requirements.txt
+
+      - name: Run tests
+        run: |
+          source .venv/bin/activate
+          pytest
